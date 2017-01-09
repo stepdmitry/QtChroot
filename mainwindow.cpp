@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->comboBox->insertItem(QString("An Item"), 1);
 }
 
 
@@ -17,7 +16,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-
+    system("pause");
 }
 
 void MainWindow::on_close_button_clicked()
