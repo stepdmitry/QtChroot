@@ -113,8 +113,6 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
-        QObject::connect(OK_button, SIGNAL(clicked()), OK_button, SLOT(click()));
-        QObject::connect(comboBox, SIGNAL(editTextChanged(QString)), lineEdit, SLOT(setText(QString)));
 
         comboBox->setCurrentIndex(-1);
 
