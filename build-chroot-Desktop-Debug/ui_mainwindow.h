@@ -18,8 +18,6 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
-#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -33,19 +31,21 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QListView *listView;
     QLabel *label_2;
     QCheckBox *checkBox;
     QLabel *label_3;
     QLabel *label;
     QComboBox *comboBox;
-    QListWidget *listWidget;
-    QListView *listView_2;
     QCheckBox *checkBox_2;
     QLineEdit *lineEdit;
     QLabel *label_4;
     QPushButton *OK_button;
     QPushButton *close_button;
+    QComboBox *comboBox_2;
+    QComboBox *comboBox_3;
+    QComboBox *comboBox_4;
+    QLabel *label_5;
+    QLineEdit *lineEdit_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -54,56 +54,62 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(533, 464);
+        MainWindow->resize(312, 303);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        listView = new QListView(centralWidget);
-        listView->setObjectName(QStringLiteral("listView"));
-        listView->setGeometry(QRect(0, 30, 141, 361));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(160, 10, 81, 18));
+        label_2->setGeometry(QRect(160, 0, 81, 18));
         checkBox = new QCheckBox(centralWidget);
         checkBox->setObjectName(QStringLiteral("checkBox"));
-        checkBox->setGeometry(QRect(320, 30, 201, 22));
+        checkBox->setGeometry(QRect(0, 170, 201, 22));
         checkBox->setChecked(true);
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(320, 100, 131, 18));
+        label_3->setGeometry(QRect(0, 60, 131, 18));
         label_3->setFrameShape(QFrame::NoFrame);
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(0, 10, 91, 18));
+        label->setGeometry(QRect(0, 0, 91, 18));
         comboBox = new QComboBox(centralWidget);
         comboBox->setObjectName(QStringLiteral("comboBox"));
-        comboBox->setGeometry(QRect(320, 120, 201, 31));
+        comboBox->setGeometry(QRect(0, 80, 151, 31));
         comboBox->setStyleSheet(QStringLiteral(""));
-        listWidget = new QListWidget(centralWidget);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(320, 150, 201, 101));
-        listView_2 = new QListView(centralWidget);
-        listView_2->setObjectName(QStringLiteral("listView_2"));
-        listView_2->setGeometry(QRect(160, 30, 151, 361));
         checkBox_2 = new QCheckBox(centralWidget);
         checkBox_2->setObjectName(QStringLiteral("checkBox_2"));
-        checkBox_2->setGeometry(QRect(320, 60, 201, 22));
+        checkBox_2->setGeometry(QRect(0, 200, 201, 22));
         checkBox_2->setChecked(true);
         lineEdit = new QLineEdit(centralWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(322, 271, 201, 21));
+        lineEdit->setGeometry(QRect(2, 131, 151, 21));
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(320, 250, 59, 18));
+        label_4->setGeometry(QRect(0, 110, 59, 18));
         OK_button = new QPushButton(centralWidget);
         OK_button->setObjectName(QStringLiteral("OK_button"));
-        OK_button->setGeometry(QRect(430, 310, 88, 34));
+        OK_button->setGeometry(QRect(210, 160, 91, 34));
         close_button = new QPushButton(centralWidget);
         close_button->setObjectName(QStringLiteral("close_button"));
-        close_button->setGeometry(QRect(430, 350, 88, 34));
+        close_button->setGeometry(QRect(210, 200, 91, 34));
+        comboBox_2 = new QComboBox(centralWidget);
+        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
+        comboBox_2->setGeometry(QRect(0, 20, 151, 32));
+        comboBox_3 = new QComboBox(centralWidget);
+        comboBox_3->setObjectName(QStringLiteral("comboBox_3"));
+        comboBox_3->setGeometry(QRect(150, 20, 161, 32));
+        comboBox_4 = new QComboBox(centralWidget);
+        comboBox_4->setObjectName(QStringLiteral("comboBox_4"));
+        comboBox_4->setGeometry(QRect(150, 80, 161, 31));
+        label_5 = new QLabel(centralWidget);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(150, 60, 141, 18));
+        lineEdit_2 = new QLineEdit(centralWidget);
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(150, 130, 161, 21));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 533, 30));
+        menuBar->setGeometry(QRect(0, 0, 312, 30));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -135,6 +141,7 @@ public:
         label_4->setText(QApplication::translate("MainWindow", "\320\224\321\200\321\203\320\263\320\276\320\265:", Q_NULLPTR));
         OK_button->setText(QApplication::translate("MainWindow", "OK", Q_NULLPTR));
         close_button->setText(QApplication::translate("MainWindow", "Close", Q_NULLPTR));
+        label_5->setText(QApplication::translate("MainWindow", "\320\242\320\276\321\207\320\272\320\260 \320\274\320\276\320\275\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217:", Q_NULLPTR));
     } // retranslateUi
 
 };
