@@ -44,7 +44,7 @@ void MainWindow::on_OK_button_clicked()
 
         Writer(&pattern,&file,2);
 
-        tmp="mount --bind /${I} \""+ui->lineEdit_2->text()+"${I}\" \n done\n";
+        tmp="mount --bind /${I} \""+ui->lineEdit_2->text()+"${I}\" \ndone\n";
         file.write(tmp.toUtf8());
 
         tmp="chroot "+ui->lineEdit->text()+" /bin/bash\n";

@@ -46,6 +46,8 @@ public:
     QComboBox *comboBox_4;
     QLabel *label_5;
     QLineEdit *lineEdit_2;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -54,7 +56,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(312, 303);
+        MainWindow->resize(313, 305);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label_2 = new QLabel(centralWidget);
@@ -81,7 +83,7 @@ public:
         checkBox_2->setChecked(true);
         lineEdit = new QLineEdit(centralWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(2, 131, 151, 21));
+        lineEdit->setGeometry(QRect(0, 130, 131, 21));
         label_4 = new QLabel(centralWidget);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(0, 110, 59, 18));
@@ -105,11 +107,17 @@ public:
         label_5->setGeometry(QRect(150, 60, 141, 18));
         lineEdit_2 = new QLineEdit(centralWidget);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(150, 130, 161, 21));
+        lineEdit_2->setGeometry(QRect(150, 130, 141, 21));
+        pushButton = new QPushButton(centralWidget);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(130, 130, 21, 21));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(290, 130, 21, 21));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 312, 30));
+        menuBar->setGeometry(QRect(0, 0, 313, 30));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -142,6 +150,8 @@ public:
         OK_button->setText(QApplication::translate("MainWindow", "OK", Q_NULLPTR));
         close_button->setText(QApplication::translate("MainWindow", "Close", Q_NULLPTR));
         label_5->setText(QApplication::translate("MainWindow", "\320\242\320\276\321\207\320\272\320\260 \320\274\320\276\320\275\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217:", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("MainWindow", "...", Q_NULLPTR));
+        pushButton_2->setText(QApplication::translate("MainWindow", "...", Q_NULLPTR));
     } // retranslateUi
 
 };
